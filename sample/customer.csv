@@ -1,0 +1,4 @@
+customer_id,customer_name,email,status_code
+1,John Doe,john.doe@example.com,ACTIVE
+2,Jane Smith,jane.smith@example.com,INACTIVE
+3,Taro Yamada,taro.yamada@example.com,ACTIVE
