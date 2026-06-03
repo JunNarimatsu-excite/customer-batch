@@ -22,7 +22,7 @@ public class CustomerDao {
 
         try (PreparedStatement ps = connection.prepareStatement(SQL_INSERT)) {
             for (Customer customer : customers) {
-                ps.setInt(1, customer.getCustomerId());
+                ps.setInt(   1, customer.getCustomerId());
                 ps.setString(2, customer.getCustomerName());
                 ps.setString(3, customer.getEmail());
                 ps.setString(4, customer.getStatusCode());

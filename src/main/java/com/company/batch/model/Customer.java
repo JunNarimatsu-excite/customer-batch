@@ -11,10 +11,10 @@ public class Customer {
     }
 
     public Customer(int customerId, String customerName, String email, String statusCode) {
-        this.customerId = customerId;
+        this.customerId   = customerId;
         this.customerName = customerName;
-        this.email = email;
-        this.statusCode = statusCode;
+        this.email        = email;
+        this.statusCode   = statusCode;
     }
 
     public int getCustomerId() {

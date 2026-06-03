@@ -16,6 +16,7 @@ public class CustomerImportService {
     private static final String CSV_PATH = "sample/customer.csv";
 
     public void execute() {
+        long start = System.nanoTime();
         try (Connection conn = DbUtil.getConnection()) {
             conn.setAutoCommit(false);
 
@@ -31,6 +32,8 @@ public class CustomerImportService {
                 new CustomerDao(conn).batchInsert(customers);
                 conn.commit();
                 System.out.println("Batch import completed: " + customers.size() + " records inserted.");
+                double elapsedSeconds = (System.nanoTime() - start) / 1_000_000_000.0;
+                System.out.printf("Elapsed time: %.3f seconds%n", elapsedSeconds);
             } catch (Exception e) {
                 conn.rollback();
                 throw e;

@@ -4,8 +4,9 @@ import com.company.batch.model.Customer;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class CsvReaderUtil {
             return customers;
         }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader reader = Files.newBufferedReader(file.toPath(), StandardCharsets.UTF_8)) {
             String line = reader.readLine(); // header
             while ((line = reader.readLine()) != null) {
                 if (line.isBlank()) {
@@ -39,8 +40,8 @@ public class CsvReaderUtil {
                 }
 
                 String customerName = fields[1].trim();
-                String email = fields[2].trim();
-                String statusCode = fields[3].trim();
+                String email        = fields[2].trim();
+                String statusCode   = fields[3].trim();
 
                 if (!isValidEmail(email)) {
                     System.err.println("Invalid email address: " + email + " for customer_id=" + customerId);
