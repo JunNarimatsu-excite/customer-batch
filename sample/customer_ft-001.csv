@@ -1,0 +1,6 @@
+customer_id,customer_name,email,status_code
+1,山田 太郎,taro.yamada@example.com,ST01
+2,佐藤 美咲,misaki.sato@example.com,ST02
+3,鈴木 一郎,ichiro.suzuki@example.com,ST03
+4,高橋 絢子,ayako.takahashi@example.com,ST01
+5,田中 健太,kenta.tanaka@example.com,ST04
