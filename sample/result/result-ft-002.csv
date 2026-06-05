@@ -1,0 +1,5 @@
+"customer_id","customer_name","email","status_code","status_name","updated_at"
+1,"山田 太郎","taro.yamada@example.com","ST01","新規","2026-06-04 15:22:53.387139"
+3,"鈴木 一郎","ichiro.suzuki@example.com","ST03","非アクティブ","2026-06-04 15:22:53.387139"
+4,"高橋 絢子","ayako.takahashi@example.com","ST01","新規","2026-06-04 15:22:53.387139"
+5,"田中 健太","kenta.tanaka@example.com","ST04","退会","2026-06-04 15:22:53.387139"
