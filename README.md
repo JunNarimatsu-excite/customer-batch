@@ -13,8 +13,7 @@ CSVファイル（10,000件）を読み込み、customer_status_masterを参照�
 
 - PostgreSQL 17 をインストール（Stack Builder不要）
 - customerdb を作成
-- create_table.sql を実行
-- master_data.sql を実行
+- sql/setup_data.sql を実行
 - application.properties の接続情報を環境に合わせて設定
   接続情報例
   db.url=jdbc:postgresql://localhost:5432/customerdb
@@ -23,7 +22,7 @@ CSVファイル（10,000件）を読み込み、customer_status_masterを参照�
 
 ## 入力ファイル
 
-CSVファイルを以下に配置します。
+CSVファイルを以下の名称で配置します。
 sample/customer.csv
 
 ## ビルド
@@ -32,7 +31,7 @@ mvn clean package
 
 ## 実行
 
-java -jar target/customer-batch-1.0.0-SNAPSHOT.jar
+java -jar target/customer-batch-1.0.0-.jar
 
 ## 実行結果
 
@@ -40,7 +39,7 @@ java -jar target/customer-batch-1.0.0-SNAPSHOT.jar
 - 登録先テーブル    ：processed_customers
 - ステータス補完元  ：customer_status_master
 - インポート件数    ： 10,000 件
-- 実行時間          ： 0.820 秒
+- 実行時間          ： 0.511 秒
 - DB検証            ： processed_customers テーブルに 10,000 件確認
 
 
